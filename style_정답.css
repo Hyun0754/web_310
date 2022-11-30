@@ -1,0 +1,38 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+*{margin: 0; padding: 0;}
+
+.box1 {width: 30%;
+        float: left;}
+.box2 {width: 70%;
+        float: left;}
+.header::after {content: ""; clear: both; display: block;}
+
+/* header설정 */
+.header {height: 80px;}
+.box1 {background-color: aqua;}
+.box2 {background-color: aquamarine;}
+.box1>h1 {background-color: azure;
+            width: 100%; height: 70px; margin-top: 5px;}
+.box1>nav {}
+.box2>nav>ul {list-style: none; height: 80px;}
+.box2>nav>ul::after {content: ""; clear: both; display: block;}
+.box>nav>ul>li {float: left;
+                width: 20%;}
+.box>ul>li>a {color: black;
+                text-decoration: none;
+                padding: 10px;
+                display: block;}
+
+
+.box3 {width: 50%; float: left;}
+.box4 {width: 50%; float: left;}
+.contents::after {content: ""; clear: both; display: block;}
+.contents {height: 600px;}
+.box3 {background-color: blanchedalmond; height: 100%;}
+.box4 {background-color:brown; height: 600px;}
+
+.box5 {background-color:blueviolet ; height:120px;}
+.box6 {background-color:aquamarine ; height:100px;}
+.box7 {background-color:bisque ; height: 80px;}
