@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+
+.box2-1 {width: 49.5%; float:left; margin-right: 1px;}
+.box2-2 {width: 49.5%; float: right; margin-left: 1px;}
+.box2::after {content: ""; clear:both; display: block;}
+
+.box4-1 {width: 20%; float:left;}
+.box4-2 {width: 60%; float:left;}
+.box4-3 {width: 20%; float: left;}
+.box4::after{content: ""; clear: both; display: block;}

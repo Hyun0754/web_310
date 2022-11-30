@@ -4,51 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_add.css">
     <title>연습장</title>
+    <style>
+        h1 {text-align: center;}
+        .a1 {background-color: aqua; color:coral;}
+        .a2 {background-color: brown; color: bisque;}
+        .a3 {text-align:left; border:1px black solid; background-color: antiquewhite; margin: 10px;}
+        .a4 {text-align:left; border:1px black dotted; background-color: azure; margin: 10px;}
+        .aa3 {background-color:rgba(255, 255, 0, 0.5)}
+        .b1 {border: 1px red solid; margin :10px;}
+
+        
+    </style>
 </head>
 <body>
-    <h1>제목(h1)</h1>
-    <strong>굵은글씨(strong,b)</strong><br>
-    줄바꿈(br) 밑줄(hr)<br><hr>
-    <em>기울어진글씨(em,i)</em>
-    <p>p태그안에 가둬야해요 태그가 없어서는 안되요.</p>        
-    
-    <h3>표작성</h3>
-     <table border="1">
-        <tr>
-            <td>이것이</td>
-            <td>표를 만드는</td>
-            <td>방법입니다.</td>
-        </tr>
-        <tr>
-            <td>다음칸은</td>
-            <td>또 이렇게</td>
-            <td>만들어야해요</td>
-        </tr>
-        <tr>
-            <td>만들다보면</td>
-            <td>조금은</td>
-            <td>햇갈려요</td>
-        </tr>
-     </table>
-     <h3>폼작성</h3>
-     <fieldset>
-        <legend>legend 이걸로 묶어요</legend>
-        <form action="" method="get">
-            <label for="name">이름</label>
-            <input type="text" id="name" autofocus required placeholder="이름을 입력해보거라">
-            <label for="num">전화번호</label>
-            <input type="text" inputmode="tel" required placeholder="전화번도 입력해보거라"  aria-placeholder="이건뭐지">
-            <br>
-            <input type="color" name="" id=""><br>
-            <input type="password" name="비밀번호" id="" placeholder="비밀번호도 입력해보거라"> <br>
-            <input type="time" name="" id="">
-            <input type="tel" name="" id="" value="이게 전화번호?">
-            <input type="search" name="" id="" placeholder="검색창입니당 ㅎㅎ">
-            <input type="submit"value="확인"> <a href="연습장2.html"><input type="button" value="확인"></a>
-            <input type="reset" value="취소">
-        </form>
-     </fieldset>
-    
+    <h1>연습장</h1>
+    <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            <span class="a1">이름을 입력해봐라</span>
+            <input type="text" class="a1-1" autofocus placeholder="이름" required>
+            &nbsp; &nbsp; &nbsp;
+            <span class="a2">전화번호</span>
+            <input type="text" class="a2-1" required placeholder="전화번호">
+        </fieldset>
+   <fieldset>
+    <legend>회원가입</legend>
+         <div class="aa1">
+               <div class="aa3">
+                    <span class="a3">아이디</span>
+                    <input type="text" placeholder="아이디" class="a3-1">
+                &nbsp;&nbsp;&nbsp;
+                <span class="a4">이메일</span>
+                <input type="email"> <br>
+               </div>
+               <div class="a5">
+                    <span class="a5">비밀번호</span>
+                    <input type="password" placeholder="비밀번호" class="a4-1">
+                    &nbsp;&nbsp; 
+                    <span class="a6">성별</span>
+                    <input type="radio" name="gender">남
+                    <input type="radio" name="gender">여
+                    <a href="공간태그001.html" target="_blank"><span class="b1"><input type="btn" value="확인"></span></a>
+
+               </div>
+         </div>
+   </fieldset>
+   
+
+
+
+    </form>
+
+
 </body>
 </html>
