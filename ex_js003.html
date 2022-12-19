@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문예제</title>
+</head>
+<body>
+    <h1>반복문 출력</h1>
+
+    <script>
+        document.write('<h2>while문 작성</h2>');
+        // while문 작성
+        // 변수등록
+        let i=0;
+        while(i<10){
+            document.write(i)
+            i++;
+            }
+
+        //for문 작성
+        for(var a=0; a<10; a++){
+            document.write(a)
+        }
+
+        // 문제
+        document.write('<h1>h1은 headeing태그의 1번입니다.</h1>')
+        document.write('<h2>h2은 headeing태그의 2번입니다.</h2>')
+        document.write('<h3>h3은 headeing태그의 3번입니다.</h3>')
+        document.write('<h4>h4은 headeing태그의 4번입니다.</h4>')
+        document.write('<h5>h5은 headeing태그의 5번입니다.</h5>')
+        document.write('<h6>h6은 headeing태그의 6번입니다.</h6>')
+
+        // 힌트 document.write('<h변수>h1은 headeing태그의 1번입니다.</h변수>')
+        for(let b=1; b<=6; b++){
+            document.write('<h'+b+'>h'+b+'은 headeing태그의 '+b+'번입니다.</h'+b+'>')
+            }
+
+        let c=1;
+        while(c<7){
+            document.write('<h'+c+'>h'+c+'은 headeing태그의 '+c+'번입니다.</h'+c+'>')
+            c++;
+            }
+
+        document.write('아이디를 입력하세요<input type=text>')
+
+        for(let d=1; d<=9; d++){
+            document.write('<li>'+d*2+'</li>')
+            }
+        for(let d=1; d<=9; d++){
+            document.write('<li>'+d*3+'</li>')
+            }
+        for(let d=1; d<=9; d++){
+            document.write('<li>'+d*4+'</li>')
+            }
+        for(let d=1; d<=9; d++){
+            document.write('<li>'+d*5+'</li>')
+            }
+
+        for(let d=1; d<=9; d++){
+            document.write('<li>'+d*5+'</li>')
+            }
+
+        
+        
+    </script>
+
+
+</body>
+</html>
