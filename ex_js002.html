@@ -64,7 +64,7 @@ flex-wrap: wrap; width: 100%;}
             <li>평균</li>
         </ul>
         <ul class="write">
-            <li id="kor" onclick="btn"></li>
+            <li id="kor"></li>
             <li id="math"></li>
             <li id="eng"></li>
             <li id="add"></li>
@@ -87,49 +87,53 @@ flex-wrap: wrap; width: 100%;}
         // // document.write('수학점수'+ math);
         // let eng=Number(prompt('영어점수는?'));
         // // document.write('영어점수'+ eng);
-        document.getElementById('kor').addEventListener('click',
+        let kor=document.getElementById('kor').addEventListener('click',
         function(event){
-            prompt('국어점수는?')
-        })
-        document.getElementById('math').addEventListener('click',
+            rkor.innerHTML=prompt('국어점수는?')
+            })
+        let math=document.getElementById('math').addEventListener('click',
         function(event){
-            prompt('수학점수는?')
-        })
-        document.getElementById('eng').addEventListener('click',
+            rmath.innerHTML=prompt('수학점수는?')
+            })
+        let eng=document.getElementById('eng').addEventListener('click',
         function(event){
-            prompt('영어점수는?')
-            
-        })
+            reng.innerHTML=prompt('영어점수는?')
+            })
+        let add=document.getElementById('add').addEventListener('click',
+        function(event){
+            radd.innerHTML=(kor+math+eng)
+            })
+        
+
          // 자바스크립트 선택하기 방법
         let rkor = document.getElementById('kor')
-        rkor.innerHTML=html
-        let rmath = document.getElementById('math')
-        rmath.innerHTML=math
+        let rmath =document.getElementById('math')
         let reng = document.getElementById('eng')
-        reng.innerHTML=eng
         let radd = document.getElementById('add')
-        radd.innerHTML=add
+        // radd.innerHTML=add
         let ravg = document.getElementById('avg')
         ravg.innerHTML=avg
+        
         
 
         add=kor+math+eng
         avg=add/3;
-        document.write(avg+'점')
+        // document.write(avg+'점')
 
         if(avg>=90)
         {document.write('당신은 A학점입니다.')}
         else if(avg<90 && avg>=80) 
-        {document.write('당신은 B학점입니다.')}ㄴ
+        {document.write('당신은 B학점입니다.')}
         else if(avg<80 && avg>=70) 
         {document.write('당신은 C학점입니다.')}
         else if(avg<70 && avg>=60) 
         {document.write('당신은 D학점입니다.')}
         else
-        {document.write('F학점')};
+        {document.write('당신은 F학점입니다.')};
        
     // 클릭하여 점수를 입력하는 과정까지 진행되었습니다.
     // prompt창에 점수를 입력하면 각 공간에 작성되는 부분이 이해가 되지않습니다.
+    //  +++++++++++++++++하다보니 클릭하여 점수 입력하는것까지 진행되었습니다,.,.그래도 설명좀 해주세요ㅠ
     // 전체적으로 이해가 부족합니다 ㅠ
 
         
