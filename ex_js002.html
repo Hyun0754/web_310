@@ -9,7 +9,7 @@
 
 
 <style>
-         @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
         body {background-image: linear-gradient(to left, #eeeeee 50%,#ffffff 50%);
             background-size: 20px 100%;
             font-family: 'Do Hyeon', sans-serif;
@@ -48,6 +48,11 @@ flex-wrap: wrap; width: 100%;}
     color: #ff6688;
     font-size: 78px;
     margin-top: 50px;
+    text-align: center;
+    display: block;
+    
+
+
     }
 </style>
 <!-- -------------------------------------------------------------------------------- -->
@@ -67,12 +72,14 @@ flex-wrap: wrap; width: 100%;}
             <li id="kor"></li>
             <li id="math"></li>
             <li id="eng"></li>
-            <li id="add"></li>
+            <li id="add">00</li>
             <li id="avg"></li>
         </ul>
     </div>
+
     <div id="result"></div>
     
+    <!-- onclick="eNum()" -->
 
 
 <!-- ------------------------------------------------------------ -->
@@ -80,62 +87,60 @@ flex-wrap: wrap; width: 100%;}
 
     <script>
        
-        
-        // let kor=Number(prompt('국어점수는?'));
-        // // document.write('국어점수'+ kor);
-        // let math=Number(prompt('수학점수는?'));
-        // // document.write('수학점수'+ math);
-        // let eng=Number(prompt('영어점수는?'));
-        // // document.write('영어점수'+ eng);
-        let kor=document.getElementById('kor').addEventListener('click',
-        function(event){
-            rkor.innerHTML=prompt('국어점수는?')
-            })
-        let math=document.getElementById('math').addEventListener('click',
-        function(event){
-            rmath.innerHTML=prompt('수학점수는?')
-            })
-        let eng=document.getElementById('eng').addEventListener('click',
-        function(event){
-            reng.innerHTML=prompt('영어점수는?')
-            })
-        let add=document.getElementById('add').addEventListener('click',
-        function(event){
-            radd.innerHTML=(kor+math+eng)
-            })
-        
-
-         // 자바스크립트 선택하기 방법
+    
+          // 자바스크립트 선택하기 방법
         let rkor = document.getElementById('kor')
         let rmath =document.getElementById('math')
         let reng = document.getElementById('eng')
         let radd = document.getElementById('add')
-        // radd.innerHTML=add
         let ravg = document.getElementById('avg')
-        ravg.innerHTML=avg
-        
-        
+        let ko,ma,en,ad,av
+        let aa = document.getElementById('result')
 
-        add=kor+math+eng
-        avg=add/3;
-        // document.write(avg+'점')
+
+        document.getElementById('kor').addEventListener('click',
+        function(event){
+            ko=Number(prompt('국어점수는?'));
+            rkor.innerHTML=ko
+            })
+        document.getElementById('math').addEventListener('click',
+        function(event){
+            ma=Number(prompt('수학점수는?'))
+            rmath.innerHTML=ma
+            })
+        document.getElementById('eng').addEventListener('click',
+        function(event){
+            en=Number(prompt('영어점수는?'))
+            reng.innerHTML=en
+            })
+        document.getElementById('add').addEventListener('click',
+        function(event){
+            ad= ko+ma+en;
+            radd.innerHTML=ad
+            })
+        document.getElementById('avg').addEventListener('click',
+        function(event){
+            av=ad/3
+            ravg.innerHTML=Math.floor(av) 
+            })
 
         if(avg>=90)
-        {document.write('당신은 A학점입니다.')}
+        {aa.innerHTML=('당신은 A학점입니다.')}
         else if(avg<90 && avg>=80) 
-        {document.write('당신은 B학점입니다.')}
+        {aa.innerHTML=('당신은 B학점입니다.')}
         else if(avg<80 && avg>=70) 
-        {document.write('당신은 C학점입니다.')}
+        {aa.innerHTML=('당신은 C학점입니다.')}
         else if(avg<70 && avg>=60) 
-        {document.write('당신은 D학점입니다.')}
+        {aa.innerHTML=('당신은 D학점입니다.')}
         else
-        {document.write('당신은 F학점입니다.')};
+        {aa.innerHTML=('당신은 F학점입니다.')};
+        
+        aa.style.fontSize='80px'
+        aa.style.cursor='pointer'
        
-    // 클릭하여 점수를 입력하는 과정까지 진행되었습니다.
-    // prompt창에 점수를 입력하면 각 공간에 작성되는 부분이 이해가 되지않습니다.
-    //  +++++++++++++++++하다보니 클릭하여 점수 입력하는것까지 진행되었습니다,.,.그래도 설명좀 해주세요ㅠ
-    // 전체적으로 이해가 부족합니다 ㅠ
-
+        
+       
+   
         
        
         
